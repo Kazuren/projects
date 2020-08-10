@@ -1,0 +1,27 @@
+@import '../styles/variables.scss';
+
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 33.3333%;
+  background-color: $color-white;
+  border-right: 4px solid $color-black;
+  border-radius: 0px;
+  font-size: 1.5rem;
+  &.highlighted {
+    background-color: $color-blue-200;
+  }
+  &:nth-child(-n+6) {
+    border-bottom: 4px solid $color-black;
+  }
+  &:nth-child(3n) {
+    border-right: none;
+  }
+  &::after {
+    content: '';
+    display: block;
+    padding: 50% 0;
+  }
+}

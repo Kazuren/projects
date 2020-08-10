@@ -1,0 +1,65 @@
+@import '../styles/variables.scss';
+
+.game {
+  width: 480px;
+  text-align: center;
+}
+.sortButton {
+  margin-top: 1rem;
+}
+.newGameButton {
+  margin-bottom: 1rem;
+}
+.sortButton, .newGameButton {
+  width: 480px;
+  height: 50px;
+  color: $color-gray-900;
+  background-color: $color-white;
+  border: 1px solid $color-blue-400;
+  border-radius: 2px;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: background-color 0.2s ease-out;
+  &:hover {
+    background-color: $color-blue-100;
+  }
+  &:active {
+    transition: background-color 0s ease-out;
+    background-color: $color-indigo-200;
+  }
+}
+
+.status {
+  margin-bottom: 1rem;
+  height: 50px;
+  line-height: 50px;
+}
+
+.history {
+  display: flex;
+  margin-top: 1rem;
+  overflow-x: scroll;
+  .historyMove {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  .historyInfo {
+    text-align: left;
+  }
+  .historyBoard > div {
+    min-width: calc(160px - 1rem);
+    border: 1px solid $color-black;
+    transition: border-color 0.2s ease-out;
+    &:hover {
+      border-color: $color-blue-400;
+      cursor: pointer;
+    }
+    &:active {
+      transition: border-color 0s ease-out;
+      border-color: $color-indigo-600;
+    }
+  }
+  .active > div {
+    border-color: $color-blue-400;
+  }
+}
